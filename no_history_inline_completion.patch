@@ -1,0 +1,12 @@
+--- components/omnibox/browser/history_provider.cc	2016-09-04 20:41:42.818400328 -0400
++++ components/omnibox/browser/history_provider.cc.new	2016-09-04 20:41:35.204882748 -0400
+@@ -37,8 +37,7 @@
+ // static
+ bool HistoryProvider::PreventInlineAutocomplete(
+     const AutocompleteInput& input) {
+-  return input.prevent_inline_autocomplete() ||
+-      (!input.text().empty() && base::IsUnicodeWhitespace(input.text().back()));
++  return true;
+ }
+ 
+ HistoryProvider::HistoryProvider(AutocompleteProvider::Type type,
